@@ -36,7 +36,7 @@ body {
     justify-content: space-between;
     background-color: #FFFFFF;
     padding: 15px;
-    font-size: var(--sm);
+    font-size: var(--md);
     max-width: 100rem;
     height: 7.2rem;
     margin-left: auto;
@@ -75,7 +75,7 @@ body {
     height: 3rem;
     width: 3rem;
     margin-bottom: 2rem;
-    margin-right: 3rem;
+    margin-left: 3rem;
 }
 .home_img img{
     border-radius: 50%;
@@ -234,8 +234,14 @@ body {
         max-width: 450px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 7.5rem;
+        padding-top: 2rem;
         column-gap: 2rem;
+    }
+    .home_content .home_description{
+        margin: 0rem 1rem 2rem;
+    }
+    .home_content .home_subtitle{
+        margin-left: 0rem;
     }
     .home_img img{
         border-radius: 50%;
@@ -257,6 +263,9 @@ body {
     .home_scroll{
         display: none;
     }
+    .Aboutme__title{
+        padding-top: 5rem;
+    }
     .Aboutme_description{
         color: var(--black);
         font-weight: bold;
@@ -272,7 +281,15 @@ body {
     align-self: center;
     }
     .about_info {
+        display: flex;
+        justify-content: space-around;
         width: 80%;
         margin: 0rem auto 3.5rem;
+    }
+    .about__info-title{
+        font-size: var(--lg);
+    }
+    .about__info-name{
+        font-size: var(--sm);
     }
 }
