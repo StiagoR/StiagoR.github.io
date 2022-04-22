@@ -51,9 +51,13 @@ body {
     color: var(--black);
     font-weight: 200;
 }
+.nav__toggle{
+    display:none;
+}
 .logo{
     margin-left: 1rem;
     font-weight: 200;
+    min-width: fit-content;
 }
 .list{
     list-style: none;
@@ -170,7 +174,7 @@ body {
 }
 .Aboutme_description{
     color: var(--black);
-    font-weight: bold;
+    font-weight: 100;
     padding: 4rem 30rem 4rem 30rem;
     line-height: 3rem;
     text-align: justify;
@@ -184,6 +188,7 @@ body {
 }
 .about_info span{
     color: var(--black);
+    margin-bottom: 1rem;
 }
 .about__info-title,.about__info-name{
     display: block;
@@ -196,7 +201,7 @@ body {
 }
 .about__info-name{
     font-size: var(--md);
-    font-weight: bold;
+    font-weight: 100;
     color: var(--black);
 }
 .about_button{
@@ -247,15 +252,14 @@ body {
 }
 .footer{
     background-color: var(--footer-background);
-    padding: 6.8rem 0rem 2.6rem;
     margin-top: 2rem;
     color: var(--white)
 }
 .footer__maincontainer{
+    padding-top: 3rem;
     background-color: var(--footer-background);
 }
 .footer__container{
-    height: 6.8rem;
     display: flex;
     justify-content: space-around;
 }
@@ -285,33 +289,31 @@ body {
 .footer__socials {
     justify-self: flex-end;
     font-size: var(--lg);
-    font-weight: 200;
+    font-weight: 100;
 }
 .footer__social{
-    color: var(--white);
+    color: var(--black);
     margin-left: 3rem;
 }
 .footer__copy {
-    margin-top: 8.5rem; 
+    margin-top: 5rem;
+    padding-bottom: 3rem; 
     text-align: center;
     font-size:var(--sm);
     color: var(--white)
 }
 @media screen and (max-width:900px){
-    .header{
-        display: none;
-    }
+
     .home_container {
         display: flex;
         max-width: 750px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 7.5rem;
+        padding-top: 12.5rem;
         column-gap: 2rem;
     }
     .Aboutme_description{
         color: var(--black);
-        font-weight: bold;
         padding: 4rem 10rem 4rem 10rem;
         line-height: 2.5rem;
         text-align: justify;
@@ -330,11 +332,30 @@ body {
         display: inline-flex;
         align-self: center;
     }
+    .contact__container{
+        margin:3rem 10rem;
+    }
 }
 
 @media screen and (max-width:650px) {
     .header{
-        display: none;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -1px 4px rgb(0 0 0 / 15%);
+    }
+    .navbar{
+        flex-wrap: nowrap;
+        height: 5.8rem;
+        padding: 8px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+
+    }
+    .nav__toggle{
+        display:contents;
+        font-size: var(--md);
     }
     .menu{
         width: 100%;
@@ -392,22 +413,22 @@ body {
     }
     .Aboutme_description{
         color: var(--black);
-        font-weight: bold;
+        font-weight: 100;
         padding: 4rem 4rem 4rem 4rem;
         line-height: 2.5rem;
         text-align: justify;
         font-size: var(--md);
     }
     .about_button{
-    justify-content: center;
-    width: 100%;
-    display: inline-flex;
-    align-self: center;
+        justify-content: center;
+        width: 100%;
+        display: inline-flex;
+        align-self: center;
     }
     .about_info {
         display: flex;
         justify-content: space-around;
-        width: 80%;
+        width: 90%;
         margin: 0rem auto 3.5rem;
     }
     .about__info-title{
@@ -416,23 +437,25 @@ body {
     .about__info-name{
         font-size: var(--sm);
     }
+    .contact__container{
+        margin:3rem 3rem;
+    }
     .footer {
-        height: 10rem;
-        padding: 10.8rem 0rem 2.6rem;
+        height: 30rem;
     }
     .footer__container{
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
     }
     .footer__container-titles, .footer__links{
         margin-bottom: 2rem;
+        text-align: center;
     }
     .footer__container-titles .footer__subtitle{
         display: inline-block;
         margin: 0 auto;
     }
-    .footer__copy{
-        margin-top:6rem
+    .footer__copy {
+        padding-bottom: 7rem; 
     }
 }
